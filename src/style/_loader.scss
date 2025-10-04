@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: rgba(103, 101, 101, 0.834);
+    background-color: $overlay;
     z-index: 1;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
             border-width: 5px;
             animation: custom-oval-spin 1s linear infinite;
             box-sizing: border-box;
-            border-color: #fff #6c6a6a #6c6a6a;
+            border-color: $loader-border-a $loader-border-b $loader-border-b;
         }
     }
 }

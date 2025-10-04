@@ -1,3 +1,5 @@
+@use "sass:color";
+@import "./_variables.scss";
 @import "./_loader.scss";
 
 @import "./_sidebar.scss";
@@ -6,25 +8,25 @@
     line-height: 1.5;
     font-weight: 400;
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    color: var(--color-text);
+    background-color: var(--color-bg);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100vw;
     height: 100vh;
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+    font-family: var(--font-family-base) !important;
 }
 
 a {
     font-weight: 500;
-    color: #646cff;
+    color: var(--color-primary);
     text-decoration: inherit;
 }
 
 a:hover {
-    color: #535bf2;
+    color: var(--color-primary-700);
 }
 
 body {
@@ -33,6 +35,8 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
 }
 
 h1 {
@@ -41,13 +45,13 @@ h1 {
 }
 
 button {
-    border-radius: 8px;
+    border-radius: var(--radius);
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--color-btn-bg, #1a1a1a);
     cursor: pointer;
     transition: border-color 0.25s;
 }
@@ -63,16 +67,16 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
     :root {
-        color: #213547;
-        background-color: #ffffff;
+        color: var(--color-text);
+        background-color: var(--color-bg);
     }
 
     a:hover {
-        color: #747bff;
+        color: var(--color-accent);
     }
 
     button {
-        background-color: #f9f9f9;
+        background-color: var(--color-btn-bg-light);
     }
 }
 
@@ -81,5 +85,5 @@ button:focus-visible {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #4e9ef6 0%, #0710c9 25%, #04255f 70%);
+    background: linear-gradient(135deg, #{$color-dark} 0%, color.adjust($color-dark, $lightness: -8%) 60%);
 }

@@ -1,0 +1,53 @@
+// Common design tokens: colors, fonts, sizes, radii
+// SCSS variables + CSS custom properties for runtime usage
+
+// Colors
+$color-primary: #646cff;
+$color-primary-700: #535bf2;
+$color-accent: #4e9ef6;
+// Replace dark/black shades with blue variants
+$color-dark: #04255f; // deep navy blue
+$color-surface: #f8f9fa;
+$color-bg: #0710c9; // page background -> deep blue
+$color-text: #f2e9e4;
+$color-muted: #c9ada7;
+$color-btn-bg: $color-primary; // use primary blue for buttons
+$color-btn-bg-light: #cfd9ff; // light blue for light buttons
+$color-sidebar-bg: #04255f; // sidebar use deep navy
+$color-sidebar-avatar-bg: #4e9ef6; // lighter blue avatar
+$color-sidebar-logout-bg: #535bf2; // logout button blue
+$color-sidebar-logout-hover: #646cff;
+$overlay: rgba(103, 101, 101, 0.834);
+$loader-border-a: #ffffff;
+$loader-border-b: #6c6a6a;
+
+// Typography
+$font-family-base: system-ui, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$heading-font-weight: 600;
+
+// Spacing & radius
+$radius: 8px;
+
+// Export CSS custom properties for runtime theming and vanilla CSS use
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-700: #{$color-primary-700};
+  --color-accent: #{$color-accent};
+  --color-dark: #{$color-dark};
+  --color-surface: #{$color-surface};
+  --color-bg: #{$color-bg};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
+  --font-family-base: #{$font-family-base};
+  --radius: #{$radius};
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #213547;
+    --color-bg: #ffffff;
+    --color-accent: #747bff;
+    --color-btn-bg: #f9f9f9;
+  }
+}
