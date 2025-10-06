@@ -87,3 +87,17 @@ button:focus-visible {
     align-items: center;
     background: linear-gradient(135deg, #{$color-dark} 0%, color.adjust($color-dark, $lightness: -8%) 60%);
 }
+
+.password-toggle {
+    width: 100%;
+    &:hover {
+        background-color: transparent !important;
+    }
+    &:focus {
+        background-color: transparent !important;
+    }
+    svg {
+        height: 1rem;
+        width: 2rem;
+    }
+}

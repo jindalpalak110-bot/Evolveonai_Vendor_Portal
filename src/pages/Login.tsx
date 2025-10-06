@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import InputBox from "../components/InputBox";
+import PasswordInput from "../components/PasswordInput";
 import CustomButton from "../components/Button";
 import FormContainer from "../components/Formcontainer";
 import { login } from "../services/loginService";
@@ -37,7 +38,7 @@ const Login = () => {
         <FormContainer title="Sign In" icon={<LockOutlinedIcon />} className="login-form">
           <form onSubmit={handleSubmit}>
             <InputBox label="Email Address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <InputBox label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <PasswordInput label="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
             <CustomButton type="submit">Sign In</CustomButton>
           </form>
         </FormContainer>

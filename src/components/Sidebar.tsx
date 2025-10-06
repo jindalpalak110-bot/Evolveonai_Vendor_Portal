@@ -21,8 +21,8 @@ const Sidebar: React.FC = () => {
             <div className="sidebar__user-details">
                 <div className="sidebar__avatar">{userDetail?.name?.charAt(0).toUpperCase()}</div>
                 <div className="sidebar__info">
-                <div className="sidebar__name">{userDetail?.name}</div>
-                <div className="sidebar__email">{userDetail?.email}</div>
+                    <div className="sidebar__name">{userDetail?.name}</div>
+                    <div className="sidebar__email">{userDetail?.email}</div>
                 </div>
             </div>
             <nav className="sidebar__nav">

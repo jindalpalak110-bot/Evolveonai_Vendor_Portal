@@ -1,5 +1,5 @@
 .sidebar {
-  width: 240px;
+  width: 255px;
   height: 100vh;
   background: $color-sidebar-bg;
   color: $color-text;
@@ -13,6 +13,9 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    background: #08214b;
+    padding: 0.875rem;
+    border-radius: 1.5rem;
     .sidebar__avatar {
       width: 64px;
       height: 64px;
@@ -36,6 +39,15 @@
         font-size: 0.95rem;
         color: $color-muted;
       }
+    }
+  }
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 1rem;
+    a {
+      color: $loader-border-a;
     }
   }
   .sidebar__logout {
