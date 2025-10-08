@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import './MainLayout.scss';
 import { Outlet } from 'react-router-dom';
+import Chatbot from './Chatbot';
 
 const MainLayout: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const MainLayout: React.FC = () => {
       <Sidebar />
       <div className="main-layout__content">
         <Outlet/>
+        <Chatbot />
         <footer className="main-layout__footer">
           <span>© {new Date().getFullYear()} Evolveonai Vendor Portal</span>
         </footer>

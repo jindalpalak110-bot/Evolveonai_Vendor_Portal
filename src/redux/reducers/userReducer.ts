@@ -1,8 +1,16 @@
 import type { AnyAction } from "redux";
 
+interface UserDetail {
+  _id: string;
+  name: string;
+  email: string;
+  role: string;
+  isActive: boolean;
+  
+}
 
 interface UserState {
-  userDetail: {[x:string]: string} | null;
+  userDetail: UserDetail | null;
   token: string | null;
 }
 
